@@ -4,7 +4,11 @@
         "values": {
             "main-title": "Welcome to the world of the future",
             "main-subtitle": "The future is now with copilot",
-            "main-button": "Get started"
+            "main-button": "Get started",
+            "main-features-title": "Features",
+            "main-features-subtitle": "Copilot is the best tool for your business",
+            "main-features-1-title": "Easy to use",
+            "main-features-1-description": "Copilot is easy to use and you can start using it right away"
         }
     }
 ]

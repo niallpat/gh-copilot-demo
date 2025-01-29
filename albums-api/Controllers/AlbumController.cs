@@ -22,6 +22,7 @@ namespace albums_api.Controllers
             return Ok(albums);
         }
 
+<<<<<<< HEAD
         //add a method that will get the id
         // GET api/album/5
         [HttpGet("{id}")]
@@ -29,6 +30,15 @@ namespace albums_api.Controllers
         {
             // complete this method
             var album = Album.GetAll().Find(album => album.Id == id);
+=======
+        // get album by id with a return statement
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            var albums = Album.GetAll();
+            var album = albums.Find(a => a.Id == id);
+
+>>>>>>> eb2e51b0b31e1f49b16b6061761c31066ea18d17
             if (album == null)
             {
                 return NotFound();
@@ -38,6 +48,7 @@ namespace albums_api.Controllers
         }
 
         // function that search album by name, artist or genre
+<<<<<<< HEAD
         // GET api/album/search?query=keyword
         [HttpGet("search")]
         public IActionResult Search(string query)
@@ -69,6 +80,32 @@ namespace albums_api.Controllers
                     break;
                 case "price":
                     albums.Sort((a, b) => a.Price.CompareTo(b.Price));
+=======
+        [HttpGet("search")]
+        public IActionResult Search([FromQuery] string query)
+        {
+            var albums = Album.GetAll();
+            var searchResults = albums.FindAll(a => a.Title.Contains(query) || a.Artist.Contains(query) || a.Genre.Contains(query));
+
+            return Ok(searchResults);
+        }
+
+        // function that sort albums by name, artist or genre
+        [HttpGet("sort")]
+        public IActionResult Sort([FromQuery] string field)
+        {
+            var albums = Album.GetAll();
+            switch (field)
+            {
+                case "title":
+                    albums.Sort((a, b) => string.Compare(a.Title, b.Title));
+                    break;
+                case "artist":
+                    albums.Sort((a, b) => string.Compare(a.Artist, b.Artist));
+                    break;
+                case "genre":
+                    albums.Sort((a, b) => string.Compare(a.Genre, b.Genre));
+>>>>>>> eb2e51b0b31e1f49b16b6061761c31066ea18d17
                     break;
                 default:
                     return BadRequest();

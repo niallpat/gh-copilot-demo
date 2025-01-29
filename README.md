@@ -1,28 +1,14 @@
-# Github Copilot demo 
+## Code of Conduct
 
-## Demo Scenarios
+This repository is intended for testing and development purposes only. It should not be used in a production environment.
 
-### To start discovering Github Copilot jump to [`Copilot_Demos.md`](./COPILOT_DEMOS.md)
-<br/>
+### Purpose
+The primary purpose of this repository is for experimentation, learning, and development. By using this repository, you agree to the following guidelines:
 
+1. **Testing and Development Only**: This repository is not intended for production use. Any code, configuration, or content found here should be used solely for testing or development.
+   
+2. **No Warranty**: The contents of this repository are provided "as-is" without any warranty. The maintainers are not responsible for any damage or issues arising from the use of this repository in any environment.
 
-## Solution Overview
+3. **Contributions**: Contributions are welcome, but please be aware that any changes should adhere to the purpose of this repository. Do not submit changes intended for production use.
 
-
-This repository is based on the [Azure Container Apps: Dapr Albums Sample](https://github.com/Azure-Samples/containerapps-dapralbums)
-
-It's used as a code base to demonstrate Github Copilot capabilities.
-
-The solution is composed of two microservices: the album API and the album viewer.
-
-![architecture](./assets/architecture.png)
-
-#### Album API (`album-api`)
-
-The [`album-api`](./album-api) is an .NET 6 minimal Web API that retrieves a list of Albums from Azure Storage using the Dapr State Store API. Upon running the application for the first time the database will be seeded. For subsequent calls, the list of albums will be retrieved from the backing state store.
-
-#### Album Viewer (`album-viewer`)
-
-The [`album-viewer`](./album-viewer) is a node application through which the albums retrieved by the API are surfaced. In order to display the repository of albums, the album viewer microservice uses the Dapr Service invocation API to contact the backend album API.
-
-
+By adhering to these guidelines, you help ensure that this repository remains a valuable resource for testing and development.

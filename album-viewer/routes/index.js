@@ -11,8 +11,8 @@ const axios = require("axios");
 router.get("/", async function (req, res, next) {
   try {
     
-    const url = `http://127.0.0.1:${DaprHttpPort}/v1.0/invoke/${AlbumService}/method/albums`;
-    // const url = `https://localhost:7212/albums`;
+    //const url = `http://127.0.0.1:${DaprHttpPort}/v1.0/invoke/${AlbumService}/method/albums`;
+    const url = `https://localhost:7212/albums`;
     console.log("Invoking album-api via locally: " + url);
     axios.headers = { "Content-Type": "application/json" };
     var response = await axios.get(url);

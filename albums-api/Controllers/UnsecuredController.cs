@@ -48,7 +48,7 @@ namespace UnsecureApp.Controllers
             }
             catch (Exception e)
             {
-                this.Response.Write(e.ToString());
+               // this.Response.Write(e.ToString());
             }
         
         }

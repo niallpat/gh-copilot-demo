@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 node ./bin/www"
   },
   "dependencies": {
+    "aca-frontend": "file:",
     "axios": "^0.26.1",
     "cookie-parser": "~1.4.4",
+    "d3": "^7.9.0",
     "debug": "~2.6.9",
     "dotenv": "^16.0.0",
     "express": "~4.16.1",
@@ -15,5 +17,10 @@
     "morgan": "~1.9.1",
     "pug": "^3.0.2",
     "semantic-ui-css": "^2.4.1"
+  },
+  "devDependencies": {
+    "chai": "^5.1.0",
+    "cross-env": "^7.0.3",
+    "mocha": "^10.3.0"
   }
 }

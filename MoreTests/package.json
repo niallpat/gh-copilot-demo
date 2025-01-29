@@ -1,0 +1,15 @@
+{
+  "name": "moretests",
+  "version": "1.0.0",
+  "main": "albumController.spec.js",
+  "scripts": {
+    "test": "node albumController.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "moretests": "file:"
+  }
+}
